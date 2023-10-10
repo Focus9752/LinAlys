@@ -19,8 +19,7 @@ print(r"Grænseværdien for x->pi- er: {}".format(limit(expr, x, pi, "-")
 ))
 
 # c)
-# Led efter løsninger i intervallet (pi,2pi) (af en eller anden årsag virkede symbolet "pi" ikke)
-sol = nsolve(expr, x, (3.14,2*3.14), solver="bisect")
+sol = nsolve(expr, x, (pi,6))
 print("\n Løsningen til f(c)=0 i (pi,2pi) er: {}".format(sol))
 
 # Opg. 4.2
@@ -39,7 +38,7 @@ plt.figure(1)
 ax = plt.gca()
 ax.set_xlabel("x")
 ax.set_ylabel("f(x)")
-plt.title("Opg. 4.2 a) fig. 1")
+plt.title("Fig. 1")
 plt.plot()
 plt.plot(x_vals, y_vals)
 
@@ -51,7 +50,7 @@ plt.figure(2)
 ax = plt.gca()
 ax.set_xlabel("x")
 ax.set_ylabel("f(x)")
-plt.title("Opg. 4.2 a) fig. 2")
+plt.title("Fig. 2")
 plt.plot(x_vals, y_vals)
 
 pdp = PdfPages(r"C:\Users\marcu\OneDrive\Documents\GitHub\LinAlys\UA4\plots.pdf")
